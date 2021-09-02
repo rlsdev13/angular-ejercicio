@@ -1,0 +1,51 @@
+<h1>Ejercicio Numeros</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <button (click) = "limpiarLocal()">
+            Limpiar LocalStorage
+        </button>
+    </div>
+    <div class="col">
+        <button (click) = "ordenarAscendente()">
+            Ordenar Ascendente
+        </button>
+    </div>
+    <div class="col">
+        <button (click) = "ordenarDescendente()">
+            Ordenar Descendente
+        </button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <p>Minimo: {{valMinimo}}</p>
+    </div>
+    <div class="col">
+        <p>Maximo: {{valMaximo}}</p>
+    </div>
+    <div class="col">
+        <p>Media: {{valMedia}}</p>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-agregar 
+            [nuevo]="nuevo"
+            (OnNewNumber) = "agregarNumero( $event )"
+        >
+
+        </app-agregar>
+    </div>
+
+    <div class="col">
+        <app-items [arrayNumbers]="arrayNumbers"></app-items>  
+    </div>
+</div>
+
+<br>
+
+

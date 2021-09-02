@@ -1,0 +1,38 @@
+<!-- <ul>
+    <li *ngFor="let img of resultado">
+        {{img.message}}
+    </li>
+</ul> -->
+
+<div *ngIf="resultado" class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="card">
+            <img [src]="resultado.message" 
+                [alt]="resultado.message.split('/')[4]"
+                class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{resultado.message.split('/')[4] | titlecase }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Dogs</h1>
+
+<div class="row">
+    <div *ngFor="let img of arrayResultados"
+         class="col-md-4 col-sm-6">
+        <div class="card">
+            <img [src]="img.message" 
+                [alt]="img.message.split('/')[4]"
+                class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">
+                    {{img.message.split('/')[4] | titlecase }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
